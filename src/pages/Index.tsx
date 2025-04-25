@@ -11,24 +11,22 @@ const Index = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/lovable-uploads/5f88b0bc-e635-42c3-9cae-74e27de3777f.png')",
-          backgroundSize: "cover", 
+          backgroundImage: "url('/lovable-uploads/d540c958-cba4-4cdb-b171-1a6b7ad492a5.png')",
+          backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
-          opacity: 1, // Ensure full opacity
-          filter: "brightness(1)", // Ensure full brightness
+          opacity: 0.7,
         }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-black/40" />
-      </div>
+      />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
           <div className="text-center mb-20">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-              CrisisChain
+            <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <span className="text-white">Crisis</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Chain</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300">
               Mint real-time geo-tagged disaster alerts as NFTs.
@@ -38,11 +36,11 @@ const Index = () => {
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <div className="glass rounded-lg p-4 flex items-center gap-4">
                 <WaitlistCounter />
-                <Button variant="default" className="bg-primary hover:bg-primary/90">
+                <Button variant="default" className="bg-red-600 hover:bg-red-700">
                   Join Waitlist
                 </Button>
               </div>
-              <Button variant="outline" className="glass border-white/10">
+              <Button variant="outline" className="glass border-white/20 hover:bg-white/10">
                 Learn More
               </Button>
             </div>
