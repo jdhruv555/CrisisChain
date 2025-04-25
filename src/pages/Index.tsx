@@ -58,26 +58,31 @@ const Index = () => {
 
           {/* Features Grid */}
           <TooltipProvider>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative mt-16">
-              {/* Animated Background Gradients */}
-              <div className="absolute inset-0 bg-gradient-to-r from-[#14F195]/10 via-transparent to-[#9945FF]/10 blur-3xl -z-10 animate-pulse" />
-              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent blur-2xl -z-10" />
+            <div className="relative py-20">
+              {/* Animated background effects */}
+              <div className="absolute inset-0 -z-10">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#14F195]/5 via-transparent to-[#9945FF]/5 animate-pulse duration-5000" />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/50 to-transparent" />
+              </div>
               
-              <FeatureCard 
-                icon={MapPin} 
-                title="Report" 
-                description="Snap and submit disaster events from your phone" 
-              />
-              <FeatureCard 
-                icon={Check} 
-                title="Verify" 
-                description="Crowdsource truth via community voting" 
-              />
-              <FeatureCard 
-                icon={Send} 
-                title="Respond" 
-                description="Aid orgs use verified alerts to act fast" 
-              />
+              {/* Cards grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                <FeatureCard 
+                  icon={MapPin} 
+                  title="Report" 
+                  description="Snap and submit disaster events from your phone" 
+                />
+                <FeatureCard 
+                  icon={Check} 
+                  title="Verify" 
+                  description="Crowdsource truth via community voting" 
+                />
+                <FeatureCard 
+                  icon={Send} 
+                  title="Respond" 
+                  description="Aid orgs use verified alerts to act fast" 
+                />
+              </div>
             </div>
           </TooltipProvider>
         </div>
