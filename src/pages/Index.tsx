@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { WaitlistCounter } from "@/components/WaitlistCounter";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -13,15 +12,15 @@ const Index = () => {
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
-      {/* Background Video */}
-      <video
-        autoPlay
-        muted
-        loop
-        className="absolute inset-0 w-full h-full object-cover opacity-40"
-      >
-        <source src="https://player.vimeo.com/external/477892592.sd.mp4?s=c3c472226e2652442ce7bc09c8edcb0b08c5659c&profile_id=164&oauth2_token_id=57447761" type="video/mp4" />
-      </video>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 w-full h-full bg-cover bg-center opacity-40"
+        style={{ 
+          backgroundImage: 'url("/background.jpg")', 
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      />
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
