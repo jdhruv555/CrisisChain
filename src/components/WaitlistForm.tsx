@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { Solana } from "lucide-react";
+import { CircleDollarSign } from "lucide-react";
 
 export const WaitlistForm = () => {
   const [email, setEmail] = useState("");
@@ -47,7 +47,7 @@ export const WaitlistForm = () => {
         disabled={isSubmitting}
         className="waitlist-gradient text-white font-semibold hover:opacity-90 transition-opacity"
       >
-        <Solana className="mr-2" size={18} />
+        <CircleDollarSign className="mr-2" size={18} />
         {isSubmitting ? "Joining..." : "Join Waitlist"}
       </Button>
     </form>
