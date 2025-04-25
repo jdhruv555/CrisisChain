@@ -1,4 +1,3 @@
-
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const avatars = [
@@ -16,15 +15,14 @@ export const WaitlistCounter = ({ onClick }: { onClick?: () => void }) => {
     >
       <div className="flex -space-x-3">
         {avatars.map((avatar, i) => (
-          <Avatar key={i} className="w-8 h-8 border-2 border-background/50 ring-2 ring-purple-500/20 transition-transform hover:scale-110">
+          <Avatar key={i} className="w-8 h-8 border-2 border-background/50 ring-2 ring-[#14F195]/20 transition-transform hover:scale-110">
             <AvatarImage src={avatar} alt={`NFT Member ${i + 1}`} />
           </Avatar>
         ))}
-        <div className="w-8 h-8 rounded-full flex items-center justify-center bg-purple-500/10 border-2 border-purple-500/20 text-white text-xs font-semibold">
+        <div className="w-8 h-8 rounded-full flex items-center justify-center bg-gradient-to-r from-[#9945FF] to-[#14F195] text-white text-xs font-bold shadow-lg">
           100+
         </div>
       </div>
     </div>
   );
 };
-
