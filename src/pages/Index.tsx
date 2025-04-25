@@ -1,5 +1,6 @@
 
 import { Button } from "@/components/ui/button";
+import { WaitlistCounter } from "@/components/WaitlistCounter";
 import { FeatureCard } from "@/components/FeatureCard";
 import { MapPin, Send, Check } from "lucide-react";
 import { useState } from "react";
@@ -47,7 +48,8 @@ const Index = () => {
             
             {/* Waitlist Section */}
             <div className="flex flex-col items-center justify-center gap-4 mt-4 md:mt-6">
-              <div className="glass rounded-xl p-3 md:p-4 backdrop-blur-lg flex items-center justify-center gap-4 w-full sm:w-auto">
+              <div className="glass rounded-xl p-3 md:p-4 backdrop-blur-lg flex items-center gap-4 w-full sm:w-auto">
+                {!isMobile ? <WaitlistCounter /> : null}
                 <WaitlistForm />
               </div>
             </div>

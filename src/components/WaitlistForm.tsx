@@ -29,7 +29,6 @@ export const WaitlistForm = () => {
 
       toast.success("Thank you for joining our waitlist!");
       setEmail("");
-      setShowForm(false);
       setShowCounter(true);
     } catch (error) {
       console.error("Error:", error);
@@ -40,11 +39,7 @@ export const WaitlistForm = () => {
   };
 
   if (showCounter) {
-    return (
-      <div className="flex items-center justify-center w-full">
-        <WaitlistCounter />
-      </div>
-    );
+    return <WaitlistCounter />;
   }
 
   if (!showForm) {
