@@ -22,7 +22,7 @@ const Index = () => {
               <span className="text-red-600">Crisis</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Chain</span>
             </h1>
-            <p className="text-xl mb-8 text-yellow-300 md:text-2xl font-normal">
+            <p className="text-xl mb-8 md:text-2xl font-normal text-gray-50">
               Mint real-time geo-tagged disaster alerts as NFTs.
               <br />
               Verify incidents. Mobilize global aid faster.
