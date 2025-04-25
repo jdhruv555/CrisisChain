@@ -47,9 +47,8 @@ const Index = () => {
             
             {/* Waitlist Section */}
             <div className="flex flex-col items-center justify-center gap-4 mt-4 md:mt-6">
-              <div className="glass rounded-xl p-3 md:p-4 backdrop-blur-lg flex items-center gap-4 w-full sm:w-auto">
-                {!isMobile && <WaitlistForm />}
-                {isMobile && <WaitlistForm />}
+              <div className="glass rounded-xl p-3 md:p-4 backdrop-blur-lg flex items-center justify-center gap-4 w-full sm:w-auto">
+                <WaitlistForm />
               </div>
             </div>
           </div>

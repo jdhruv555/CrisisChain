@@ -40,7 +40,11 @@ export const WaitlistForm = () => {
   };
 
   if (showCounter) {
-    return <WaitlistCounter />;
+    return (
+      <div className="flex items-center justify-center w-full">
+        <WaitlistCounter />
+      </div>
+    );
   }
 
   if (!showForm) {
