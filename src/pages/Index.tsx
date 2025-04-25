@@ -11,12 +11,12 @@ const Index = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/lovable-uploads/c4654f4a-8e1f-4ab2-abcf-c9de68d2cf2c.png')",
+          backgroundImage: "url('/lovable-uploads/5f88b0bc-e635-42c3-9cae-74e27de3777f.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-        <div className="absolute inset-0 gradient-overlay" />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-black/40" />
       </div>
 
       {/* Content */}
@@ -34,10 +34,10 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
               <div className="glass rounded-lg p-4 flex items-center gap-4">
+                <WaitlistCounter />
                 <Button variant="default" className="bg-primary hover:bg-primary/90">
                   Join Waitlist
                 </Button>
-                <WaitlistCounter />
               </div>
               <Button variant="outline" className="glass border-white/10">
                 Learn More
