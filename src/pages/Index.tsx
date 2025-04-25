@@ -1,7 +1,9 @@
+
 import { Button } from "@/components/ui/button";
 import { WaitlistCounter } from "@/components/WaitlistCounter";
 import { FeatureCard } from "@/components/FeatureCard";
 import { MapPin, Send, Check } from "lucide-react";
+
 const Index = () => {
   return <div className="relative min-h-screen w-full overflow-hidden">
       {/* Background Image */}
@@ -22,9 +24,15 @@ const Index = () => {
               <span className="text-red-600">Crisis</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Chain</span>
             </h1>
-            <p className="text-xl mb-8 md:text-2xl font-normal text-gray-50">
+            <p className="text-xl mb-8 md:text-2xl font-normal text-gray-50 
+              animate-fade-in 
+              transition-all duration-700 
+              hover:scale-105 
+              hover:text-white 
+              hover:tracking-wider 
+              drop-shadow-[0_0_10px_rgba(255,0,0,0.3)]">
               Mint real-time geo-tagged disaster alerts as NFTs.
-              <br />
+              <br className="hidden md:block" />
               Verify incidents. Mobilize global aid faster.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
