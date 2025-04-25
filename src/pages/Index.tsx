@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { WaitlistCounter } from "@/components/WaitlistCounter";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -7,6 +6,7 @@ import { useState } from "react";
 import { LearnMoreModal } from "@/components/LearnMoreModal";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { TooltipProvider } from "@/components/ui/tooltip";
+import { Footer } from "@/components/Footer";
 
 const Index = () => {
   const [showLearnMore, setShowLearnMore] = useState(false);
@@ -84,6 +84,8 @@ const Index = () => {
         open={showLearnMore} 
         onOpenChange={setShowLearnMore}
       />
+      
+      <Footer />
     </div>
   );
 };
