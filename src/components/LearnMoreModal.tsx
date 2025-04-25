@@ -5,7 +5,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Shield, Users, Connection, FileCheck, Rocket } from "lucide-react";
+import { Shield, Users, Network, FileCheck, Rocket } from "lucide-react";
 
 interface LearnMoreModalProps {
   open: boolean;
@@ -53,7 +53,7 @@ export const LearnMoreModal = ({ open, onOpenChange }: LearnMoreModalProps) => {
             <div className="glass p-6 rounded-xl space-y-3 hover:bg-white/5 transition-colors group">
               <div className="flex items-center gap-3">
                 <div className="p-2 rounded-lg bg-purple-500/10 group-hover:bg-purple-500/20 transition-colors">
-                  <Connection className="w-6 h-6 text-purple-300" />
+                  <Network className="w-6 h-6 text-purple-300" />
                 </div>
                 <h3 className="text-lg font-semibold text-white">Global Aid Network</h3>
               </div>
