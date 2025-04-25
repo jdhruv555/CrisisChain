@@ -6,6 +6,7 @@ import { MapPin, Send, Check } from "lucide-react";
 import { useState } from "react";
 import { LearnMoreModal } from "@/components/LearnMoreModal";
 import { WaitlistForm } from "@/components/WaitlistForm";
+import { TooltipProvider } from "@/components/ui/tooltip";
 
 const Index = () => {
   const [showLearnMore, setShowLearnMore] = useState(false);
@@ -56,24 +57,26 @@ const Index = () => {
           </div>
 
           {/* Features Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-transparent to-red-500/10 blur-3xl -z-10" />
-            <FeatureCard 
-              icon={MapPin} 
-              title="Report" 
-              description="Snap and submit disaster events from your phone" 
-            />
-            <FeatureCard 
-              icon={Check} 
-              title="Verify" 
-              description="Crowdsource truth via community voting" 
-            />
-            <FeatureCard 
-              icon={Send} 
-              title="Respond" 
-              description="Aid orgs use verified alerts to act fast" 
-            />
-          </div>
+          <TooltipProvider>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative">
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-transparent to-red-500/10 blur-3xl -z-10" />
+              <FeatureCard 
+                icon={MapPin} 
+                title="Report" 
+                description="Snap and submit disaster events from your phone" 
+              />
+              <FeatureCard 
+                icon={Check} 
+                title="Verify" 
+                description="Crowdsource truth via community voting" 
+              />
+              <FeatureCard 
+                icon={Send} 
+                title="Respond" 
+                description="Aid orgs use verified alerts to act fast" 
+              />
+            </div>
+          </TooltipProvider>
         </div>
       </div>
 
