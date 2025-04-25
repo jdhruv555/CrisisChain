@@ -23,16 +23,16 @@ export const WaitlistCounter = ({ onClick }: { onClick?: () => void }) => {
             <AvatarImage src={avatar} alt={`NFT Member ${i + 1}`} />
           </Avatar>
         ))}
+        <div 
+          className="w-8 h-8 bg-black text-white rounded-full flex items-center justify-center font-bold text-xs z-30"
+        >
+          +99
+        </div>
       </div>
       <div 
         className="absolute inset-0 rounded-full bg-purple-500/10 border-2 border-purple-500/20 flex items-center justify-center text-white text-xs font-semibold z-0 opacity-50"
       >
         100+
-      </div>
-      <div 
-        className="absolute bottom-0 right-0 translate-x-1/3 translate-y-1/3 z-30 bg-black text-white rounded-full w-6 h-6 flex items-center justify-center font-bold text-xs"
-      >
-        +99
       </div>
     </div>
   );
