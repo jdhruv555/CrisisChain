@@ -4,15 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-import { CircleDollarSign } from "lucide-react";
-import { WaitlistCounter } from "./WaitlistCounter";
+import { CircleDollarSign, CheckCircle } from "lucide-react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 export const WaitlistForm = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showForm, setShowForm] = useState(false);
-  const [showCounter, setShowCounter] = useState(false);
+  const [showThanks, setShowThanks] = useState(false);
   const isMobile = useIsMobile();
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -29,7 +28,7 @@ export const WaitlistForm = () => {
 
       toast.success("Thank you for joining our waitlist!");
       setEmail("");
-      setShowCounter(true);
+      setShowThanks(true);
     } catch (error) {
       console.error("Error:", error);
       toast.error("This email has already joined the waitlist.");
@@ -38,8 +37,13 @@ export const WaitlistForm = () => {
     }
   };
 
-  if (showCounter) {
-    return <WaitlistCounter />;
+  if (showThanks) {
+    return (
+      <div className="flex items-center gap-2 bg-black/20 rounded-full px-6 py-3 backdrop-blur-sm border border-white/10">
+        <CheckCircle className="text-green-400" size={20} />
+        <span className="text-white font-medium">Thank you for joining!</span>
+      </div>
+    );
   }
 
   if (!showForm) {
