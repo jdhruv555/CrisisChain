@@ -30,6 +30,7 @@ export const WaitlistForm = () => {
       toast.success("Thank you for joining our waitlist!");
       setEmail("");
       setShowCounter(true);
+      setShowForm(false); // Hide the form after successful submission
     } catch (error) {
       console.error("Error:", error);
       toast.error("This email has already joined the waitlist.");
