@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -26,7 +25,7 @@ export const WaitlistForm = () => {
 
       toast.success("Thank you for joining our waitlist!");
       setEmail("");
-      setShowCounter(true); // Show the counter after successful submission
+      setShowCounter(true);
     } catch (error) {
       console.error("Error:", error);
       toast.error("This email has already joined the waitlist.");
@@ -38,21 +37,21 @@ export const WaitlistForm = () => {
   return (
     <div className="space-y-4">
       {!showCounter ? (
-        <form onSubmit={handleSubmit} className="flex gap-2">
+        <form onSubmit={handleSubmit} className="flex gap-3 items-center bg-black/20 rounded-full p-1.5 backdrop-blur-sm border border-white/10">
           <Input
             type="email"
             placeholder="Enter your email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="max-w-[200px] glass-gradient text-white placeholder:text-gray-400"
+            className="flex-1 min-w-[240px] glass-gradient text-white placeholder:text-gray-400 border-0 rounded-full focus-visible:ring-0 focus-visible:ring-offset-0"
           />
           <Button 
             type="submit" 
             disabled={isSubmitting}
-            className="waitlist-gradient text-white font-semibold hover:opacity-90 transition-opacity"
+            className="waitlist-gradient text-white font-medium rounded-full hover:opacity-90 transition-opacity"
           >
-            <CircleDollarSign className="mr-2" size={18} />
+            <CircleDollarSign className="mr-2" size={16} />
             {isSubmitting ? "Joining..." : "Join Waitlist"}
           </Button>
         </form>
@@ -62,4 +61,3 @@ export const WaitlistForm = () => {
     </div>
   );
 };
-

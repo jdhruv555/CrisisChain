@@ -10,20 +10,20 @@ const avatars = [
 
 export const WaitlistCounter = () => {
   return (
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-4 bg-black/20 rounded-full px-4 py-2 backdrop-blur-sm border border-white/10">
       <div className="flex -space-x-3">
         {avatars.map((avatar, i) => (
-          <Avatar key={i} className="w-10 h-10 border-2 border-background ring-2 ring-purple-500/20 transition-transform hover:scale-110">
+          <Avatar key={i} className="w-8 h-8 border-2 border-background/50 ring-2 ring-purple-500/20 transition-transform hover:scale-110">
             <AvatarImage src={avatar} alt={`Member ${i + 1}`} />
           </Avatar>
         ))}
-        <div className="w-10 h-10 rounded-full flex items-center justify-center bg-purple-500/10 border-2 border-purple-500/20 text-white font-semibold text-sm">
+        <div className="w-8 h-8 rounded-full flex items-center justify-center bg-purple-500/10 border-2 border-purple-500/20 text-white text-xs font-semibold">
           +99
         </div>
       </div>
-      <div className="flex flex-col items-start">
-        <span className="text-lg font-semibold text-white">Join our</span>
-        <span className="text-sm text-purple-300">growing waitlist</span>
+      <div className="flex flex-col">
+        <span className="text-base font-medium text-white">Join our</span>
+        <span className="text-sm text-purple-300/90">growing waitlist</span>
       </div>
     </div>
   );
