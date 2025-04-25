@@ -14,18 +14,18 @@ export const WaitlistCounter = ({ onClick }: { onClick?: () => void }) => {
       onClick={onClick}
       className="flex items-center gap-4 bg-black/20 rounded-full px-4 py-2 backdrop-blur-sm border border-white/10 cursor-pointer hover:bg-black/30 transition-colors relative"
     >
-      <div className="flex -space-x-3 z-10">
+      <div className="flex -space-x-3 relative z-10">
         {avatars.map((avatar, i) => (
           <Avatar 
             key={i} 
-            className="w-8 h-8 border-2 border-background/50 ring-2 ring-purple-500/20 transition-transform hover:scale-110"
+            className="w-8 h-8 border-2 border-background/50 ring-2 ring-purple-500/20 transition-transform hover:scale-110 relative z-20"
           >
             <AvatarImage src={avatar} alt={`NFT Member ${i + 1}`} />
           </Avatar>
         ))}
       </div>
       <div 
-        className="absolute inset-0 rounded-full bg-purple-500/10 border-2 border-purple-500/20 flex items-center justify-center text-white text-xs font-semibold z-0"
+        className="absolute inset-0 rounded-full bg-purple-500/10 border-2 border-purple-500/20 flex items-center justify-center text-white text-xs font-semibold z-0 opacity-50"
       >
         100+
       </div>
