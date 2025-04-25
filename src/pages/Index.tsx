@@ -12,8 +12,11 @@ const Index = () => {
         className="absolute inset-0 z-0"
         style={{
           backgroundImage: "url('/lovable-uploads/5f88b0bc-e635-42c3-9cae-74e27de3777f.png')",
-          backgroundSize: "cover",
+          backgroundSize: "cover", 
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          opacity: 1, // Ensure full opacity
+          filter: "brightness(1)", // Ensure full brightness
         }}
       >
         <div className="absolute inset-0 bg-gradient-to-br from-black/80 to-black/40" />
