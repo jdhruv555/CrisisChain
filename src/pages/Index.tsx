@@ -58,8 +58,11 @@ const Index = () => {
 
           {/* Features Grid */}
           <TooltipProvider>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 relative">
-              <div className="absolute inset-0 bg-gradient-to-r from-red-500/10 via-transparent to-red-500/10 blur-3xl -z-10" />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 relative mt-16">
+              {/* Animated Background Gradients */}
+              <div className="absolute inset-0 bg-gradient-to-r from-[#14F195]/10 via-transparent to-[#9945FF]/10 blur-3xl -z-10 animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-b from-transparent via-red-500/5 to-transparent blur-2xl -z-10" />
+              
               <FeatureCard 
                 icon={MapPin} 
                 title="Report" 
