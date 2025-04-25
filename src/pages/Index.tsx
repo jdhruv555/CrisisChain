@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { WaitlistCounter } from "@/components/WaitlistCounter";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -7,9 +8,11 @@ import { LearnMoreModal } from "@/components/LearnMoreModal";
 import { WaitlistForm } from "@/components/WaitlistForm";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { Footer } from "@/components/Footer";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const Index = () => {
   const [showLearnMore, setShowLearnMore] = useState(false);
+  const isMobile = useIsMobile();
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden">
@@ -27,10 +30,10 @@ const Index = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-12">
+      <div className="relative z-10 container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-4xl mx-auto">
           {/* Hero Section */}
-          <div className="text-center mb-12 space-y-6">
+          <div className="text-center mb-8 md:mb-12 space-y-6">
             <div className="animate-fade-in">
               <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
                 <span className="text-red-600 animate-pulse">Crisis</span>
@@ -43,9 +46,9 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-              <div className="glass rounded-xl p-4 backdrop-blur-lg flex items-center gap-4">
-                <WaitlistCounter />
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+              <div className="glass rounded-xl p-4 backdrop-blur-lg flex items-center gap-4 w-full sm:w-auto">
+                {!isMobile ? <WaitlistCounter /> : null}
                 <WaitlistForm />
               </div>
             </div>
@@ -53,7 +56,7 @@ const Index = () => {
 
           {/* Features Grid */}
           <TooltipProvider>
-            <div className="relative py-8">
+            <div className="relative py-4 md:py-8">
               {/* Animated background effects */}
               <div className="absolute inset-0 -z-10">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#14F195]/5 via-transparent to-[#9945FF]/5 animate-pulse duration-5000" />
@@ -61,7 +64,7 @@ const Index = () => {
               </div>
               
               {/* Cards grid */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-8 relative">
                 <FeatureCard 
                   icon={MapPin} 
                   title="Report" 
@@ -80,11 +83,11 @@ const Index = () => {
               </div>
 
               {/* Repositioned Learn More Button */}
-              <div className="text-center mt-8">
+              <div className="text-center mt-6 md:mt-8">
                 <Button 
                   variant="outline" 
                   onClick={() => setShowLearnMore(true)}
-                  className="glass rounded-xl border-white/20 hover:bg-white/10 backdrop-blur-md px-8 py-6 text-lg font-medium transition-all duration-300 hover:scale-105"
+                  className="glass rounded-xl border-white/20 hover:bg-white/10 backdrop-blur-md px-6 md:px-8 py-4 md:py-6 text-base md:text-lg font-medium transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                 >
                   Learn More
                 </Button>

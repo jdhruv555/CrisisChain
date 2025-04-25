@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -5,12 +6,14 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { CircleDollarSign } from "lucide-react";
 import { WaitlistCounter } from "./WaitlistCounter";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 export const WaitlistForm = () => {
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showForm, setShowForm] = useState(false);
   const [showCounter, setShowCounter] = useState(false);
+  const isMobile = useIsMobile();
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,7 +46,7 @@ export const WaitlistForm = () => {
     return (
       <Button 
         onClick={() => setShowForm(true)}
-        className="bg-gradient-to-r from-[#14F195] to-[#9945FF] text-white font-semibold px-6 py-2 rounded-full hover:opacity-90 transition-opacity"
+        className={`bg-gradient-to-r from-[#14F195] to-[#9945FF] text-white font-semibold px-6 py-2 rounded-full hover:opacity-90 transition-opacity ${isMobile ? 'w-full' : ''}`}
       >
         Join Waitlist
       </Button>
@@ -51,19 +54,19 @@ export const WaitlistForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex gap-3 items-center bg-black/20 rounded-full p-1.5 backdrop-blur-sm border border-white/10">
+    <form onSubmit={handleSubmit} className={`flex gap-3 items-center bg-black/20 rounded-full p-1.5 backdrop-blur-sm border border-white/10 ${isMobile ? 'w-full flex-col' : ''}`}>
       <Input
         type="email"
         placeholder="Enter your email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
-        className="flex-1 min-w-[240px] glass-gradient text-white placeholder:text-gray-400 border-0 rounded-full focus-visible:ring-0 focus-visible:ring-offset-0"
+        className={`flex-1 min-w-0 ${isMobile ? 'w-full' : 'min-w-[240px]'} glass-gradient text-white placeholder:text-gray-400 border-0 rounded-full focus-visible:ring-0 focus-visible:ring-offset-0`}
       />
       <Button 
         type="submit" 
         disabled={isSubmitting}
-        className="waitlist-gradient text-white font-medium rounded-full hover:opacity-90 transition-opacity"
+        className={`waitlist-gradient text-white font-medium rounded-full hover:opacity-90 transition-opacity ${isMobile ? 'w-full mt-2' : ''}`}
       >
         <CircleDollarSign className="mr-2" size={16} />
         {isSubmitting ? "Joining..." : "Join Waitlist"}
