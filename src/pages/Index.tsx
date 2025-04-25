@@ -37,7 +37,7 @@ const Index = () => {
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">Chain</span>
               </h1>
               <p className="text-lg md:text-2xl font-normal text-gray-50 mt-4">
-                Mint real-time geo-tagged disaster alerts as NFTs.
+                Mint real-time geo-tagged disaster alerts as NFTs <span className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-[#14F195] to-[#9945FF]">on SOLANA</span>.
                 <br className="hidden md:block" />
                 Verify incidents. Mobilize global aid faster.
               </p>
