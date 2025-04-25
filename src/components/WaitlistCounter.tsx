@@ -29,6 +29,11 @@ export const WaitlistCounter = ({ onClick }: { onClick?: () => void }) => {
       >
         100+
       </div>
+      <div 
+        className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-30 bg-black text-white rounded-full w-10 h-10 flex items-center justify-center font-bold text-sm"
+      >
+        +99
+      </div>
     </div>
   );
 };
