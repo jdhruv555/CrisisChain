@@ -43,16 +43,11 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
               <div className="glass rounded-xl p-4 backdrop-blur-lg flex items-center gap-4">
                 <WaitlistCounter />
                 <WaitlistForm />
               </div>
-              <Button variant="outline" 
-                onClick={() => setShowLearnMore(true)}
-                className="glass border-white/20 hover:bg-white/10">
-                Learn More
-              </Button>
             </div>
           </div>
 
@@ -82,6 +77,17 @@ const Index = () => {
                   title="Respond" 
                   description="Aid orgs use verified alerts to act fast" 
                 />
+              </div>
+
+              {/* Repositioned Learn More Button */}
+              <div className="text-center mt-12">
+                <Button 
+                  variant="outline" 
+                  onClick={() => setShowLearnMore(true)}
+                  className="glass rounded-xl border-white/20 hover:bg-white/10 backdrop-blur-md px-8 py-6 text-lg font-medium transition-all duration-300 hover:scale-105"
+                >
+                  Learn More
+                </Button>
               </div>
             </div>
           </TooltipProvider>
