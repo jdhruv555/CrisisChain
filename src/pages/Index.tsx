@@ -53,7 +53,7 @@ const Index = () => {
 
           {/* Features Grid */}
           <TooltipProvider>
-            <div className="relative py-20">
+            <div className="relative py-8">
               {/* Animated background effects */}
               <div className="absolute inset-0 -z-10">
                 <div className="absolute inset-0 bg-gradient-to-r from-[#14F195]/5 via-transparent to-[#9945FF]/5 animate-pulse duration-5000" />
@@ -80,7 +80,7 @@ const Index = () => {
               </div>
 
               {/* Repositioned Learn More Button */}
-              <div className="text-center mt-12">
+              <div className="text-center mt-8">
                 <Button 
                   variant="outline" 
                   onClick={() => setShowLearnMore(true)}
