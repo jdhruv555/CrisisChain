@@ -1,3 +1,4 @@
+
 import { Button } from "@/components/ui/button";
 import { WaitlistCounter } from "@/components/WaitlistCounter";
 import { FeatureCard } from "@/components/FeatureCard";
@@ -16,7 +17,7 @@ const Index = () => {
       <div 
         className="absolute inset-0 w-full h-full bg-cover bg-center opacity-40"
         style={{ 
-          backgroundImage: 'url("/background.jpg")', 
+          backgroundImage: 'url("/lovable-uploads/8bf8bece-c2f4-404a-b5e5-2a6c54d72562.png")', 
           backgroundSize: 'cover',
           backgroundPosition: 'center'
         }}
